@@ -1,7 +1,5 @@
 'use strict';
-//calls on lib/reader.js
-//willwork with 1.txt,2.txt,3.txt
-//this file accepts files as parm, invocs fileReader func
+
 const fileReader = require('./lib/reader.js');
 
 // Obtain and assert input
