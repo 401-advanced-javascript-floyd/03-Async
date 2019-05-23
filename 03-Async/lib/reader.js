@@ -7,7 +7,7 @@ let contents = [];
  * @type {function(*=)}
  */
 module.exports = exports = (files, callback) => {
-  readAll([...files],callback);
+  readAll([...files], callback);
   contents = [];
 };
 
@@ -17,13 +17,12 @@ module.exports = exports = (files, callback) => {
  * @param callback
  */
 const readOne = (file, callback) => {
-  fs.readFile( file, (err, data) => {
-    console.log('line 21', data);
-    if(err) { callback(err); }
+  fs.readFile(file, (err, data) => {
+    if (err) { callback(err); }
     else { callback(undefined, data); }
   });
 };
-       
+
 /**
  * Reads and returns the contents of 3 files
  * Requires 3 paths, otherwise, it'll fail with aggression
@@ -35,7 +34,7 @@ const readOne = (file, callback) => {
 
 //1Fix reader.js so that the files are read in the order specified on the command line AND returns an array of their contents in that same order.
 const readAll = (paths, callback) => {
-  if(paths.length != 3) {
+  if (paths.length != 3) {
     return callback('expected 3 path');
 
   }
@@ -47,10 +46,9 @@ const readAll = (paths, callback) => {
     }
     else {
       console.log(data);
-      readOne(data);
       console.log('Read File 1');
       contents.push(data.toString().trim());
-  
+
 
       readOne(paths[1], (err, data) => {
         if (err) {
@@ -75,7 +73,7 @@ const readAll = (paths, callback) => {
     }
   });
 
-  
+
 
 };
 
