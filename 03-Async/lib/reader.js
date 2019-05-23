@@ -45,7 +45,6 @@ const readAll = (paths, callback) => {
       callback(err);
     }
     else {
-      console.log(data);
       console.log('Read File 1');
       contents.push(data.toString().trim());
 
