@@ -9,7 +9,7 @@ const editFile = (file) => {
       throw err;
     }
     else {
-      fs.writeFile(file, rand, (err) => {
+      fs.writeFile(file, rand, err => {
         if (err) console.log(err);
 
       });
