@@ -8,13 +8,13 @@ const writerFile = require('../../edit-file.js');
 
 describe('func reads file', () => {
   it('error if not able read file', done => {
-    let result = writerFile(writerFile, (err, data)=>{
+    let result = writerFile(writerFile, (err, data) => {
       expect(err).toBedefined();
       done();
     });
 
   });
-    
+
 });
 
 
@@ -33,10 +33,10 @@ describe('File Reader Module', () => {
 
   it('error when given other than 3 files', done => {
     let files = ['file1.txt', 'file2.txt', 'file2.txt'];
-    reader(files, (err,data) => {
+    reader(files, (err, data) => {
       expect(err).toBeNull();
-      expect(data instanceof Array ).toBeTruthy();
-      expect(data.length ).toBe(3);
+      expect(data instanceof Array).toBeTruthy();
+      expect(data.length).toBe(3);
       done();
     });
   });
